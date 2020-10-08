@@ -27,10 +27,17 @@ void printArray(int array[], int size) {
   printf("\n");
 }
 
-int main() {
-  int data[] = {-2, 45, 0, 11, -9};
-  int size = sizeof(data) / sizeof(data[0]);
-  bubbleSort(data, size);
+int main() 
+{
+  int n;
+  printf("enter size of the array");
+  scanf("%d",&n);
+  int data[n];
+  for (int i = 0; i < n; ++i) 
+  {
+    scanf("%d  ", &data[i]);
+  }
+  bubbleSort(data, n);
   printf("Sorted Array in Ascending Order:\n");
-  printArray(data, size);
+  printArray(data, n);
 }
