@@ -1,4 +1,4 @@
-/Program to implement technique of bfs/
+/*Program to implement technique of bfs*/
 /*
 SAMPLE INPUT AND OUTPUT
 
