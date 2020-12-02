@@ -1,32 +1,5 @@
 // Bubble sort in C
-
 #include <stdio.h>
-
-void bubbleSort(int array[], int size) 
-{
-  for (int step = 0; step < size - 1; ++step) 
-  {
-    for (int i = 0; i < size - step - 1; ++i) 
-    {
-      // To sort in descending order, change">" to "<".
-      if (array[i] > array[i + 1]) 
-      {
-        int temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-      }
-    }
-  }
-}
-
-// function to print the array
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; ++i) {
-    printf("%d  ", array[i]);
-  }
-  printf("\n");
-}
-
 int main() 
 {
   int n;
@@ -37,7 +10,24 @@ int main()
   {
     scanf("%d  ", &data[i]);
   }
-  bubbleSort(data, n);
+
+  for (int step = 0; step < size - 1; ++step) 
+  {
+    for (int i = 0; i < size - step - 1; ++i) 
+    {
+      // To sort in descending order, change">" to "<".
+      if (data[i] > data[i + 1]) 
+      {
+        int temp = data[i];
+        data[i] = data[i + 1];
+        data[i + 1] = temp;
+      }
+    }
+  }
+
   printf("Sorted Array in Ascending Order:\n");
-  printArray(data, n);
+  for (int i = 0; i < n; ++i) 
+  {
+    printf("%d  ", data[i]);
+  }
 }
